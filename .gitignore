@@ -1,0 +1,24 @@
+# Local credentials and environments
+.env
+*.key
+*.token
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Generated reports and temporary test output
+reports/
+test_*/
+*.log
+
+# Downloaded market data is local input, not source code.
+data/kline/*.json
+data/*.json
+!data/README.md
+
+# Local editor and OS files
+.vscode/*.json
+.idea/
+.DS_Store
+Thumbs.db
