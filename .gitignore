@@ -2,6 +2,7 @@
 .env
 *.key
 *.token
+config.py
 venv/
 .venv/
 __pycache__/
