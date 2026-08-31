@@ -200,7 +200,7 @@ python .\main.py 600879 `
 3. 排除目标股票与目标时间段重叠的候选窗口；
 4. 使用 CUDA 批量计算相似距离；
 5. 输出 Top10 历史相似窗口；
-6. 在项目自身 `reports\report.html` 生成报告。
+6. 在项目自身 `reports\代码_起始日期_结束日期\report.html` 生成报告。
 
 ## 9. 显存不足时的处理
 
@@ -220,10 +220,10 @@ python .\main.py 600879 --start-date 20260501 --end-date 20260530 --top 10 --bat
 
 ## 10. 报告位置
 
-报告默认生成在：
+报告默认生成在每次运行独立的子目录中：
 
 ```text
-D:\project\stock-pattern-matcher-gpu\reports\report.html
+D:\project\stock-pattern-matcher-gpu\reports\600879_20260506_20260529\report.html
 ```
 
 也可以显式指定：
@@ -232,7 +232,7 @@ D:\project\stock-pattern-matcher-gpu\reports\report.html
 python .\main.py 600879 --start-date 20260501 --end-date 20260530 --report .\reports
 ```
 
-用浏览器打开 `reports\report.html`，可查看目标窗口和 Top-N 相似窗口的 SVG K 线图。
+用浏览器打开对应子目录下的 `report.html`，可查看目标窗口和 Top-N 相似窗口的 SVG K 线图。
 
 ## 11. 常见问题
 
@@ -309,5 +309,5 @@ data\kline\
 - [ ] `data\kline` 中存在行情 JSON
 - [ ] 目标股票 JSON 存在
 - [ ] 匹配命令运行成功
-- [ ] `reports\report.html` 已生成
+- [ ] `reports\代码_起始日期_结束日期\report.html` 已生成
 - [ ] 未把 API Key、完整行情数据和报告提交到 GitHub

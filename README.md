@@ -16,7 +16,7 @@ cd F:\project\stock-pattern-matcher-gpu
 python .\main.py 600703 --start-date 20260501 --end-date 20260530 --top 10
 ```
 
-默认报告输出到项目自己的 `reports\report.html`，默认数据读取项目自己的 `data\kline`。也就是说，本项目不依赖 `F:\project\stock-pattern-matcher` 的目录或文件。
+报告默认输出到项目自己的 `reports\代码_起始日期_结束日期\` 子目录（例如 `reports\600703_20260720_20260820\report.html`），每次运行独立归档，不会互相覆盖。默认数据读取项目自己的 `data\kline`。也就是说，本项目不依赖 `F:\project\stock-pattern-matcher` 的目录或文件。
 
 日期可以使用 `YYYYMMDD` 或 `YYYY-MM-DD` 格式。起止日期定义目标形态的自然日范围，范围内只使用实际交易日。
 
@@ -24,6 +24,12 @@ python .\main.py 600703 --start-date 20260501 --end-date 20260530 --top 10
 
 ```powershell
 python .\main.py 600703 --start-date 20260501 --end-date 20260530 --top 10 --batch-size 2048
+```
+
+可调 K 线图展示长度（默认 30 个自然日）：
+
+```powershell
+python .\main.py 600703 --start-date 20260501 --end-date 20260530 --top 10 --chart-days 45
 ```
 
 ## GPU 加速原理
